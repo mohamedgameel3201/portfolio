@@ -1,0 +1,80 @@
+import './style.css';
+
+const content = {
+  en: {
+    nav: ['Home', 'About', 'Projects', 'Skills', 'Experience', 'Contact'], talk: "Let's Talk",
+    eyebrow: "Hi, I'm Mohamed", title1: 'Flutter & Laravel', title2: 'Developer',
+    intro: 'I design and build high-performance mobile apps and robust web platforms that turn ambitious ideas into polished digital products.',
+    work: 'View My Work', contact: 'Contact Me', connect: 'Connect with me',
+    aboutTitle: 'About Me', about: "I'm Mohamed Gameel Elsayed, a software engineer, founder and developer at Codiryx. I create scalable web applications with Laravel and smooth cross-platform experiences with Flutter — with a strong focus on clean code, performance and thoughtful design.",
+    stats: [['Web & Mobile', 'Specialization'], ['2 Core', 'Frameworks'], ['100%', 'Commitment']],
+    projectsTitle: 'Featured Projects', projectsHint: 'Selected concepts — real case studies coming soon',
+    projects: [
+      ['Commerce Hub', 'E-commerce Platform', 'A fast, scalable shopping experience with a flexible Laravel backend.', ['Laravel', 'MySQL', 'REST API']],
+      ['Flow Mobile', 'Cross-platform App', 'A refined Flutter experience built for Android and iOS from one codebase.', ['Flutter', 'Dart', 'Firebase']],
+      ['Codiryx Dashboard', 'Business Management', 'A clear admin workspace for tracking operations, clients and growth.', ['Laravel', 'Blade', 'Analytics']]
+    ],
+    skillsTitle: 'Skills & Technologies', skillGroups: [['Mobile Development', ['Flutter', 'Dart', 'Firebase', 'REST APIs']], ['Web Development', ['Laravel', 'PHP', 'MySQL', 'Blade']], ['Tools & Workflow', ['Git', 'GitHub', 'Figma', 'Postman']]],
+    expTitle: 'Experience', exp: [['Present', 'Founder & Developer', 'Codiryx', 'Building purposeful web and mobile products for clients and growing businesses.'], ['Professional', 'Flutter Developer', 'Mobile Applications', 'Creating responsive, maintainable cross-platform applications with delightful UX.'], ['Professional', 'Laravel Developer', 'Web Platforms', 'Developing secure APIs, dashboards and scalable business systems.']],
+    cta: "Let's Build Something Great", ctaText: 'Have a project in mind? Tell me about it and let’s turn the idea into a product people love.', get: 'Start a Conversation',
+    email: 'Email', phone: 'WhatsApp', location: 'Based in Egypt', rights: 'All rights reserved.', footer: 'Designed & built with care by Mohamed.'
+  },
+  ar: {
+    nav: ['الرئيسية', 'عني', 'المشاريع', 'المهارات', 'الخبرة', 'تواصل معي'], talk: 'لنتحدث',
+    eyebrow: 'مرحباً، أنا محمد', title1: 'مطوّر Flutter وLaravel', title2: 'أصنع تجارب رقمية',
+    intro: 'أصمم وأطوّر تطبيقات موبايل عالية الأداء ومنصات ويب قوية تحوّل الأفكار الطموحة إلى منتجات رقمية متقنة.',
+    work: 'شاهد أعمالي', contact: 'تواصل معي', connect: 'حساباتي',
+    aboutTitle: 'نبذة عني', about: 'أنا م/ محمد جميل السيد، مهندس برمجيات ومؤسس ومطوّر شركة Codiryx. أبني تطبيقات ويب قابلة للتوسع باستخدام Laravel وتجارب سلسة متعددة المنصات باستخدام Flutter، مع اهتمام كبير بالكود النظيف والأداء والتصميم المدروس.',
+    stats: [['ويب وموبايل', 'التخصص'], ['إطاران أساسيان', 'التقنيات'], ['%100', 'التزام']],
+    projectsTitle: 'مشاريع مختارة', projectsHint: 'نماذج مختارة — دراسات الحالة الفعلية قريباً',
+    projects: [
+      ['متجر متكامل', 'منصة تجارة إلكترونية', 'تجربة تسوق سريعة وقابلة للتوسع مع نظام خلفي مرن بلارافيل.', ['Laravel', 'MySQL', 'REST API']],
+      ['تطبيق Flow', 'تطبيق متعدد المنصات', 'تجربة Flutter متقنة لأندرويد وiOS من قاعدة كود واحدة.', ['Flutter', 'Dart', 'Firebase']],
+      ['لوحة Codiryx', 'إدارة الأعمال', 'مساحة عمل واضحة لمتابعة العمليات والعملاء والنمو.', ['Laravel', 'Blade', 'Analytics']]
+    ],
+    skillsTitle: 'المهارات والتقنيات', skillGroups: [['تطوير الموبايل', ['Flutter', 'Dart', 'Firebase', 'REST APIs']], ['تطوير الويب', ['Laravel', 'PHP', 'MySQL', 'Blade']], ['أدوات العمل', ['Git', 'GitHub', 'Figma', 'Postman']]],
+    expTitle: 'الخبرة', exp: [['الآن', 'مؤسس ومطوّر', 'Codiryx', 'بناء منتجات ويب وموبايل هادفة للعملاء والشركات النامية.'], ['احترافية', 'مطوّر Flutter', 'تطبيقات الموبايل', 'إنشاء تطبيقات متعددة المنصات سريعة وسهلة الصيانة بتجربة استخدام مميزة.'], ['احترافية', 'مطوّر Laravel', 'منصات الويب', 'تطوير واجهات API آمنة ولوحات تحكم وأنظمة أعمال قابلة للتوسع.']],
+    cta: 'لنصنع شيئاً رائعاً', ctaText: 'لديك مشروع في ذهنك؟ أخبرني عنه ولنحوّل الفكرة إلى منتج يحبه المستخدمون.', get: 'ابدأ محادثة',
+    email: 'البريد الإلكتروني', phone: 'واتساب', location: 'مقيم في مصر', rights: 'جميع الحقوق محفوظة.', footer: 'تم التصميم والتطوير بعناية بواسطة محمد.'
+  }
+};
+
+const icons = { github: 'M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.88c-2.78.6-3.37-1.18-3.37-1.18-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84a9.6 9.6 0 0 1 2.5.34c1.9-1.29 2.74-1.02 2.74-1.02.56 1.37.21 2.39.11 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2Z', mail: 'M3 5h18v14H3V5Zm9 8 9-6H3l9 6Zm0 2L3 9v8h18V9l-9 6Z', arrow: 'M5 12h14m-5-5 5 5-5 5' };
+const icon = (path, fill=false) => `<svg viewBox="0 0 24 24" aria-hidden="true" ${fill?'fill="currentColor"':'fill="none" stroke="currentColor" stroke-width="1.8"'}><path d="${path}"/></svg>`;
+let lang = localStorage.getItem('portfolio-lang') || 'en';
+const adminMode = new URLSearchParams(location.search).get('admin') === 'codiryx';
+const savedProjects = () => JSON.parse(localStorage.getItem('portfolio-projects') || 'null');
+const activeProjects = (t) => savedProjects() || t.projects;
+
+function render() {
+  const t = content[lang]; document.documentElement.lang = lang; document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.title = lang === 'ar' ? 'محمد جميل | مطوّر Flutter وLaravel' : 'Mohamed Gameel | Flutter & Laravel Developer';
+  document.querySelector('#app').innerHTML = `
+  <div class="noise"></div><main class="shell">
+    <header><a class="brand" href="#home" aria-label="Codiryx home"><span>&lt;/&gt;</span><b>MOHAMED.</b></a><nav>${t.nav.map((x,i)=>`<a href="#${['home','about','projects','skills','experience','contact'][i]}">${x}</a>`).join('')}</nav><div class="header-actions"><button class="lang" id="langBtn">${lang==='en'?'ع':'EN'}</button><a class="talk" href="https://wa.me/201023138661" target="_blank">${t.talk}<i></i></a><button class="menu" aria-label="Menu"><span></span><span></span></button></div></header>
+    <section class="hero" id="home"><div class="hero-copy reveal"><p class="eyebrow">${t.eyebrow}</p><h1>${t.title1}<br><span>${t.title2}</span></h1><p class="lead">${t.intro}</p><div class="buttons"><a class="primary" href="#projects">${t.work} ${icon(icons.arrow)}</a><a class="secondary" href="#contact">${t.contact}</a></div><p class="connect-label">${t.connect}</p><div class="socials"><a href="#contact" aria-label="GitHub">${icon(icons.github,true)}</a><a href="mailto:mohamedgamil886@gmail.com" aria-label="Email">${icon(icons.mail,true)}</a><a href="https://www.facebook.com/share/18sRiYSQ4i/" target="_blank" aria-label="Facebook"><b>f</b></a></div></div>
+      <div class="hero-art reveal"><div class="orb"></div><div class="portrait-card">${localStorage.getItem('portfolio-photo') ? `<img src="${localStorage.getItem('portfolio-photo')}" alt="Mohamed Gameel Elsayed">` : '<span>MG</span>'}<div><b>Mohamed Gameel</b><small>Software Engineer</small></div></div><div class="code-window"><div class="window-bar"><i></i><i></i><i></i><span>mohamed.dart</span></div><pre><em>class</em> <strong>Developer</strong> {\n  <i>final</i> name = <q>'Mohamed'</q>;\n  <i>final</i> company = <q>'Codiryx'</q>;\n\n  <em>List</em>&lt;String&gt; stack = [\n    <q>'Flutter'</q>, <q>'Laravel'</q>\n  ];\n\n  <strong>build</strong>() =&gt; <q>'The future'</q>;\n}</pre></div><div class="float-tag flutter">F</div><div class="float-tag laravel">L</div><div class="grid-floor"></div></div>
+    </section>
+    <section class="about section" id="about"><div class="section-copy reveal"><div class="section-title"><i></i><h2>${t.aboutTitle}</h2></div><p>${t.about}</p><div class="stats">${t.stats.map(s=>`<div><strong>${s[0]}</strong><span>${s[1]}</span></div>`).join('')}</div></div><div class="terminal reveal"><div class="terminal-head"><div><i></i><i></i><i></i></div><span>developer.profile</span></div><pre><span class="purple">const</span> developer = {\n  name: <span class="green">'Mohamed Gameel Elsayed'</span>,\n  role: <span class="green">'Software Engineer'</span>,\n  company: <span class="green">'Codiryx'</span>,\n  focus: [<span class="green">'Flutter'</span>, <span class="green">'Laravel'</span>],\n  passion: <span class="green">'Ideas into reality'</span>\n};</pre></div></section>
+    <section class="section projects" id="projects"><div class="section-heading reveal"><div class="section-title"><i></i><h2>${t.projectsTitle}</h2></div><span>${t.projectsHint}</span></div><div class="project-grid">${activeProjects(t).map((p,i)=>`<article class="project-card reveal"><div class="project-visual p${i%3+1}" ${p[4] ? `style="background-image:linear-gradient(#09101a55,#09101acc),url('${p[4]}');background-size:cover;background-position:center"` : ''}><div class="mock"><div class="mock-top"></div><div class="mock-side"></div><div class="mock-content"><i></i><i></i><i></i><strong></strong></div></div><span>0${i+1}</span></div><div class="project-body"><small>${p[1]}</small><h3>${p[0]}</h3><p>${p[2]}</p><div class="project-footer"><div class="tags">${p[3].map(x=>`<b>${x}</b>`).join('')}</div>${p[5] ? `<a class="project-link" href="${p[5]}" target="_blank" rel="noopener noreferrer">${lang==='ar'?'عرض المشروع':'View project'} ↗</a>` : ''}</div></div></article>`).join('')}</div></section>
+    <section class="section split" id="skills"><div class="skills reveal"><div class="section-title"><i></i><h2>${t.skillsTitle}</h2></div>${t.skillGroups.map(g=>`<div class="skill-group"><h3>${g[0]}</h3><div>${g[1].map(x=>`<span><i>${x[0]}</i>${x}</span>`).join('')}</div></div>`).join('')}</div><div class="experience reveal" id="experience"><div class="section-title"><i></i><h2>${t.expTitle}</h2></div><div class="timeline">${t.exp.map(x=>`<article><div class="timeline-icon">&lt;/&gt;</div><div><small>${x[0]}</small><h3>${x[1]}</h3><b>${x[2]}</b><p>${x[3]}</p></div></article>`).join('')}</div></div></section>
+    <section class="contact reveal" id="contact"><div><div class="section-title"><i></i><h2>${t.cta}</h2></div><p>${t.ctaText}</p></div><div class="contact-info"><a href="mailto:mohamedgamil886@gmail.com">${icon(icons.mail,true)}<span><small>${t.email}</small>mohamedgamil886@gmail.com</span></a><a href="https://wa.me/201023138661" target="_blank"><span class="wa">◉</span><span><small>${t.phone}</small>+20 102 313 8661</span></a><a class="primary" href="https://wa.me/201023138661" target="_blank">${t.get} ${icon(icons.arrow)}</a></div></section>
+    <footer><span>© ${new Date().getFullYear()} Mohamed Gameel. ${t.rights}</span><b>&lt;/&gt;</b><span>${t.footer}</span></footer>
+    ${adminMode ? '<button class="admin-fab" id="adminOpen">⚙</button>' : ''}<div class="admin-modal" id="adminModal"><div class="admin-panel"><button class="admin-close" id="adminClose">×</button><h2>${lang==='ar'?'إدارة البورتفوليو':'Portfolio Manager'}</h2><p>${lang==='ar'?'أضف صورتك وأدر مشاريعك. البيانات محفوظة على هذا المتصفح.':'Add your photo and manage projects. Data is saved in this browser.'}</p><label class="upload-label">${lang==='ar'?'الصورة الشخصية':'Profile photo'}<input type="file" id="photoInput" accept="image/*"></label><hr><h3>${lang==='ar'?'المشاريع':'Projects'}</h3><div class="admin-projects" id="adminProjects"></div><form id="projectForm"><input name="name" required placeholder="${lang==='ar'?'اسم المشروع':'Project name'}"><input name="type" required placeholder="${lang==='ar'?'نوع المشروع':'Project type'}"><textarea name="description" required placeholder="${lang==='ar'?'وصف المشروع':'Project description'}"></textarea><input name="tags" required placeholder="Flutter, Laravel, MySQL"><label class="upload-label">${lang==='ar'?'صورة المشروع (اختياري)':'Project image (optional)'}<input type="file" name="image" accept="image/*"></label><button class="primary" type="submit">${lang==='ar'?'إضافة المشروع':'Add project'}</button></form><button class="reset-projects" id="resetProjects">${lang==='ar'?'استعادة المشاريع الافتراضية':'Restore default projects'}</button></div></div>
+  </main>`;
+  bind();
+}
+
+function bind(){
+  const tagsInput=document.querySelector('#projectForm input[name="tags"]');tagsInput.insertAdjacentHTML('afterend',`<input name="link" type="url" placeholder="${lang==='ar'?'رابط المشروع — https://example.com':'Project URL — https://example.com'}">`);
+  document.querySelector('#langBtn').onclick=()=>{lang=lang==='en'?'ar':'en';localStorage.setItem('portfolio-lang',lang);render()};
+  const menu=document.querySelector('.menu'), nav=document.querySelector('nav'); menu.onclick=()=>nav.classList.toggle('open'); nav.querySelectorAll('a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
+  const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12}); document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  const modal=document.querySelector('#adminModal'),adminOpen=document.querySelector('#adminOpen');if(adminOpen)adminOpen.onclick=()=>{modal.classList.add('show');renderAdminProjects()};document.querySelector('#adminClose').onclick=()=>modal.classList.remove('show');
+  document.querySelector('#photoInput').onchange=e=>readImage(e.target.files[0],data=>{localStorage.setItem('portfolio-photo',data);render()});
+  document.querySelector('#projectForm').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target),file=e.target.image.files[0],save=image=>{const projects=savedProjects()||[...content[lang].projects];projects.push([f.get('name'),f.get('type'),f.get('description'),f.get('tags').split(',').map(x=>x.trim()).filter(Boolean),image||'',f.get('link')||'']);localStorage.setItem('portfolio-projects',JSON.stringify(projects));render()};file?readImage(file,save):save('')};
+  document.querySelector('#resetProjects').onclick=()=>{localStorage.removeItem('portfolio-projects');render()};
+}
+function readImage(file,done){if(!file)return;const reader=new FileReader();reader.onload=()=>{const img=new Image();img.onload=()=>{const canvas=document.createElement('canvas'),scale=Math.min(1,900/Math.max(img.width,img.height));canvas.width=img.width*scale;canvas.height=img.height*scale;canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);done(canvas.toDataURL('image/jpeg',.84))};img.src=reader.result};reader.readAsDataURL(file)}
+function renderAdminProjects(){const t=content[lang],list=document.querySelector('#adminProjects');list.innerHTML=activeProjects(t).map((p,i)=>`<div><span><b>${p[0]}</b><small>${p[1]}</small></span><button data-delete="${i}">${lang==='ar'?'حذف':'Delete'}</button></div>`).join('');list.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{const projects=[...activeProjects(t)];projects.splice(+btn.dataset.delete,1);localStorage.setItem('portfolio-projects',JSON.stringify(projects));render()})}
+render();
