@@ -1,4 +1,5 @@
 import './style.css';
+const asset = file => `${import.meta.env.BASE_URL}assets/${file}`;
 
 const content = {
   en: {
@@ -10,9 +11,12 @@ const content = {
     stats: [['Web & Mobile', 'Specialization'], ['2 Core', 'Frameworks'], ['100%', 'Commitment']],
     projectsTitle: 'Featured Projects', projectsHint: 'Selected concepts — real case studies coming soon',
     projects: [
-      ['Commerce Hub', 'E-commerce Platform', 'A fast, scalable shopping experience with a flexible Laravel backend.', ['Laravel', 'MySQL', 'REST API']],
-      ['Flow Mobile', 'Cross-platform App', 'A refined Flutter experience built for Android and iOS from one codebase.', ['Flutter', 'Dart', 'Firebase']],
-      ['Codiryx Dashboard', 'Business Management', 'A clear admin workspace for tracking operations, clients and growth.', ['Laravel', 'Blade', 'Analytics']]
+      ['Discover Academy', 'Learning Management System (LMS)', 'A comprehensive e-learning platform serving students from foundation through secondary school with live classes, assessments, assignments, and progress tracking.', ['Laravel', 'PHP', 'MySQL', 'REST API'], asset('discover.png'), 'https://discoveracdemy.com/'],
+      ['Vitamin Pharmacy', 'Online Pharmacy & Healthcare E-commerce', 'A comprehensive online pharmacy for medicines, vitamins, supplements, and personal care products with an organized shopping experience.', ['Laravel', 'Flutter', 'MySQL', 'REST API'], asset('vitamin.png'), 'https://vitamin-pharm.com/'],
+      ['Madaarek Academy', 'E-learning Platform & Mobile App', 'A flexible educational platform where learners explore courses, access training content, and track their progress across web and mobile.', ['Flutter', 'Laravel', 'MySQL', 'REST API'], asset('madaarek.png'), 'https://madaarekacademy.com/'],
+      ['Prova Store', 'Fashion E-commerce Website & Mobile App', 'A premium fashion store specializing in authentic bags and clothing with streamlined ordering and secure online payments.', ['Flutter', 'Laravel', 'MySQL', 'Apple Pay'], asset('prova.jpg'), 'https://www.prova-store.com/'],
+      ['Tawselah Express', 'Shipping & Logistics Platform', 'An integrated logistics platform for creating shipping labels, managing shipments, calculating costs, and tracking deliveries.', ['Laravel', 'PHP', 'MySQL', 'REST API'], asset('tawselah.png'), 'https://tawselah-express.com/'],
+      ['Bonyan Materials', 'Building Materials Company Website', 'A modern Arabic corporate website featuring products, services, completed projects, and quotation requests.', ['HTML', 'CSS', 'JavaScript', 'Vite'], asset('bonyan.png'), 'https://mohamedgameel3201.github.io/bonyan-materials/']
     ],
     skillsTitle: 'Skills & Technologies', skillGroups: [['Mobile Development', ['Flutter', 'Dart', 'Firebase', 'REST APIs']], ['Web Development', ['Laravel', 'PHP', 'MySQL', 'Blade']], ['Tools & Workflow', ['Git', 'GitHub', 'Figma', 'Postman']]],
     expTitle: 'Experience', exp: [['Present', 'Founder & Developer', 'Codiryx', 'Building purposeful web and mobile products for clients and growing businesses.'], ['Professional', 'Flutter Developer', 'Mobile Applications', 'Creating responsive, maintainable cross-platform applications with delightful UX.'], ['Professional', 'Laravel Developer', 'Web Platforms', 'Developing secure APIs, dashboards and scalable business systems.']],
@@ -28,9 +32,12 @@ const content = {
     stats: [['ويب وموبايل', 'التخصص'], ['إطاران أساسيان', 'التقنيات'], ['%100', 'التزام']],
     projectsTitle: 'مشاريع مختارة', projectsHint: 'نماذج مختارة — دراسات الحالة الفعلية قريباً',
     projects: [
-      ['متجر متكامل', 'منصة تجارة إلكترونية', 'تجربة تسوق سريعة وقابلة للتوسع مع نظام خلفي مرن بلارافيل.', ['Laravel', 'MySQL', 'REST API']],
-      ['تطبيق Flow', 'تطبيق متعدد المنصات', 'تجربة Flutter متقنة لأندرويد وiOS من قاعدة كود واحدة.', ['Flutter', 'Dart', 'Firebase']],
-      ['لوحة Codiryx', 'إدارة الأعمال', 'مساحة عمل واضحة لمتابعة العمليات والعملاء والنمو.', ['Laravel', 'Blade', 'Analytics']]
+      ['Discover Academy', 'منصة تعليمية متكاملة', 'منصة تعليم إلكتروني تخدم الطلاب من مرحلة التأسيس حتى الثانوية، وتوفر حصصًا مباشرة واختبارات وواجبات ومتابعة للتقدم.', ['Laravel', 'PHP', 'MySQL', 'REST API'], asset('discover.png'), 'https://discoveracdemy.com/'],
+      ['Vitamin Pharmacy', 'صيدلية ومتجر رعاية صحية', 'صيدلية إلكترونية لشراء الأدوية والفيتامينات والمكملات ومنتجات العناية الشخصية من خلال تجربة تسوق منظمة.', ['Laravel', 'Flutter', 'MySQL', 'REST API'], asset('vitamin.png'), 'https://vitamin-pharm.com/'],
+      ['Madaarek Academy', 'منصة وتطبيق تعليمي', 'منصة تعليم مرنة تتيح تصفح الدورات والوصول إلى المحتوى التدريبي ومتابعة التقدم عبر الويب والموبايل.', ['Flutter', 'Laravel', 'MySQL', 'REST API'], asset('madaarek.png'), 'https://madaarekacademy.com/'],
+      ['Prova Store', 'متجر أزياء وتطبيق موبايل', 'متجر إلكتروني للحقائب والملابس الأصلية يوفر تجربة شراء عصرية وطلبات سهلة ودفعًا إلكترونيًا آمنًا.', ['Flutter', 'Laravel', 'MySQL', 'Apple Pay'], asset('prova.jpg'), 'https://www.prova-store.com/'],
+      ['Tawselah Express', 'منصة شحن وخدمات لوجستية', 'منصة متكاملة لإصدار بوليصات الشحن وإدارة الشحنات وحساب التكلفة وتتبع عمليات التوصيل.', ['Laravel', 'PHP', 'MySQL', 'REST API'], asset('tawselah.png'), 'https://tawselah-express.com/'],
+      ['Bonyan Materials', 'موقع شركة مواد بناء', 'موقع عربي حديث يعرض المنتجات والخدمات والمشروعات السابقة ويتيح للعملاء طلب عروض الأسعار.', ['HTML', 'CSS', 'JavaScript', 'Vite'], asset('bonyan.png'), 'https://mohamedgameel3201.github.io/bonyan-materials/']
     ],
     skillsTitle: 'المهارات والتقنيات', skillGroups: [['تطوير الموبايل', ['Flutter', 'Dart', 'Firebase', 'REST APIs']], ['تطوير الويب', ['Laravel', 'PHP', 'MySQL', 'Blade']], ['أدوات العمل', ['Git', 'GitHub', 'Figma', 'Postman']]],
     expTitle: 'الخبرة', exp: [['الآن', 'مؤسس ومطوّر', 'Codiryx', 'بناء منتجات ويب وموبايل هادفة للعملاء والشركات النامية.'], ['احترافية', 'مطوّر Flutter', 'تطبيقات الموبايل', 'إنشاء تطبيقات متعددة المنصات سريعة وسهلة الصيانة بتجربة استخدام مميزة.'], ['احترافية', 'مطوّر Laravel', 'منصات الويب', 'تطوير واجهات API آمنة ولوحات تحكم وأنظمة أعمال قابلة للتوسع.']],
@@ -43,7 +50,7 @@ const icons = { github: 'M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.88c
 const icon = (path, fill=false) => `<svg viewBox="0 0 24 24" aria-hidden="true" ${fill?'fill="currentColor"':'fill="none" stroke="currentColor" stroke-width="1.8"'}><path d="${path}"/></svg>`;
 let lang = localStorage.getItem('portfolio-lang') || 'en';
 const adminMode = new URLSearchParams(location.search).get('admin') === 'codiryx';
-const savedProjects = () => JSON.parse(localStorage.getItem('portfolio-projects') || 'null');
+const savedProjects = () => JSON.parse(localStorage.getItem('portfolio-projects-v2') || 'null');
 const activeProjects = (t) => (savedProjects() || t.projects).map(p => { const item=[...p]; item[3]=(item[3]||[]).flatMap(x=>x.split(/,|—|–/).map(tag=>tag.trim()).filter(Boolean)); return item; });
 
 function render() {
@@ -73,9 +80,9 @@ function bind(){
   const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12}); document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   const modal=document.querySelector('#adminModal'),adminOpen=document.querySelector('#adminOpen');if(adminOpen)adminOpen.onclick=()=>{modal.classList.add('show');renderAdminProjects()};document.querySelector('#adminClose').onclick=()=>modal.classList.remove('show');
   document.querySelector('#photoInput').onchange=e=>readImage(e.target.files[0],data=>{localStorage.setItem('portfolio-photo',data);render()});
-  document.querySelector('#projectForm').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target),file=e.target.image.files[0],save=image=>{const projects=savedProjects()||[...content[lang].projects];projects.push([f.get('name'),f.get('type'),f.get('description'),f.get('tags').split(/,|—|–/).map(x=>x.trim()).filter(Boolean),image||'',f.get('link')||'']);localStorage.setItem('portfolio-projects',JSON.stringify(projects));render()};file?readImage(file,save):save('')};
-  document.querySelector('#resetProjects').onclick=()=>{localStorage.removeItem('portfolio-projects');render()};
+  document.querySelector('#projectForm').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target),file=e.target.image.files[0],save=image=>{const projects=savedProjects()||[...content[lang].projects];projects.push([f.get('name'),f.get('type'),f.get('description'),f.get('tags').split(/,|—|–/).map(x=>x.trim()).filter(Boolean),image||'',f.get('link')||'']);localStorage.setItem('portfolio-projects-v2',JSON.stringify(projects));render()};file?readImage(file,save):save('')};
+  document.querySelector('#resetProjects').onclick=()=>{localStorage.removeItem('portfolio-projects-v2');render()};
 }
 function readImage(file,done){if(!file)return;const reader=new FileReader();reader.onload=()=>{const img=new Image();img.onload=()=>{const canvas=document.createElement('canvas'),scale=Math.min(1,900/Math.max(img.width,img.height));canvas.width=img.width*scale;canvas.height=img.height*scale;canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);done(canvas.toDataURL('image/jpeg',.84))};img.src=reader.result};reader.readAsDataURL(file)}
-function renderAdminProjects(){const t=content[lang],list=document.querySelector('#adminProjects');list.innerHTML=activeProjects(t).map((p,i)=>`<div><span><b>${p[0]}</b><small>${p[1]}</small></span><button data-delete="${i}">${lang==='ar'?'حذف':'Delete'}</button></div>`).join('');list.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{const projects=[...activeProjects(t)];projects.splice(+btn.dataset.delete,1);localStorage.setItem('portfolio-projects',JSON.stringify(projects));render()})}
+function renderAdminProjects(){const t=content[lang],list=document.querySelector('#adminProjects');list.innerHTML=activeProjects(t).map((p,i)=>`<div><span><b>${p[0]}</b><small>${p[1]}</small></span><button data-delete="${i}">${lang==='ar'?'حذف':'Delete'}</button></div>`).join('');list.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{const projects=[...activeProjects(t)];projects.splice(+btn.dataset.delete,1);localStorage.setItem('portfolio-projects-v2',JSON.stringify(projects));render()})}
 render();
