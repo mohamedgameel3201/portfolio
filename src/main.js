@@ -1,5 +1,6 @@
 import './style.css';
 const asset = file => `${import.meta.env.BASE_URL}assets/${file}`;
+if (!localStorage.getItem('portfolio-photo')) localStorage.setItem('portfolio-photo', asset('profile.png'));
 
 const content = {
   en: {
@@ -11,12 +12,12 @@ const content = {
     stats: [['Web & Mobile', 'Specialization'], ['2 Core', 'Frameworks'], ['100%', 'Commitment']],
     projectsTitle: 'Featured Projects', projectsHint: 'Selected concepts — real case studies coming soon',
     projects: [
+      ['Bonyan Materials', 'Building Materials Company Website', 'A modern Arabic corporate website featuring products, services, completed projects, and quotation requests.', ['HTML', 'CSS', 'JavaScript', 'Vite'], asset('bonyan.png'), 'https://mohamedgameel3201.github.io/bonyan-materials/'],
       ['Discover Academy', 'Learning Management System (LMS)', 'A comprehensive e-learning platform serving students from foundation through secondary school with live classes, assessments, assignments, and progress tracking.', ['Laravel', 'PHP', 'MySQL', 'REST API'], asset('discover.png'), 'https://discoveracdemy.com/'],
       ['Vitamin Pharmacy', 'Online Pharmacy & Healthcare E-commerce', 'A comprehensive online pharmacy for medicines, vitamins, supplements, and personal care products with an organized shopping experience.', ['Laravel', 'Flutter', 'MySQL', 'REST API'], asset('vitamin.png'), 'https://vitamin-pharm.com/'],
       ['Madaarek Academy', 'E-learning Platform & Mobile App', 'A flexible educational platform where learners explore courses, access training content, and track their progress across web and mobile.', ['Flutter', 'Laravel', 'MySQL', 'REST API'], asset('madaarek.png'), 'https://madaarekacademy.com/'],
       ['Prova Store', 'Fashion E-commerce Website & Mobile App', 'A premium fashion store specializing in authentic bags and clothing with streamlined ordering and secure online payments.', ['Flutter', 'Laravel', 'MySQL', 'Apple Pay'], asset('prova.jpg'), 'https://www.prova-store.com/'],
-      ['Tawselah Express', 'Shipping & Logistics Platform', 'An integrated logistics platform for creating shipping labels, managing shipments, calculating costs, and tracking deliveries.', ['Laravel', 'PHP', 'MySQL', 'REST API'], asset('tawselah.png'), 'https://tawselah-express.com/'],
-      ['Bonyan Materials', 'Building Materials Company Website', 'A modern Arabic corporate website featuring products, services, completed projects, and quotation requests.', ['HTML', 'CSS', 'JavaScript', 'Vite'], asset('bonyan.png'), 'https://mohamedgameel3201.github.io/bonyan-materials/']
+      ['Tawselah Express', 'Shipping & Logistics Platform', 'An integrated logistics platform for creating shipping labels, managing shipments, calculating costs, and tracking deliveries.', ['Laravel', 'PHP', 'MySQL', 'REST API'], asset('tawselah.png'), 'https://tawselah-express.com/']
     ],
     skillsTitle: 'Skills & Technologies', skillGroups: [['Mobile Development', ['Flutter', 'Dart', 'Firebase', 'REST APIs']], ['Web Development', ['Laravel', 'PHP', 'MySQL', 'Blade']], ['Tools & Workflow', ['Git', 'GitHub', 'Figma', 'Postman']]],
     expTitle: 'Experience', exp: [['Present', 'Founder & Developer', 'Codiryx', 'Building purposeful web and mobile products for clients and growing businesses.'], ['Professional', 'Flutter Developer', 'Mobile Applications', 'Creating responsive, maintainable cross-platform applications with delightful UX.'], ['Professional', 'Laravel Developer', 'Web Platforms', 'Developing secure APIs, dashboards and scalable business systems.']],
@@ -32,12 +33,12 @@ const content = {
     stats: [['ويب وموبايل', 'التخصص'], ['إطاران أساسيان', 'التقنيات'], ['%100', 'التزام']],
     projectsTitle: 'مشاريع مختارة', projectsHint: 'نماذج مختارة — دراسات الحالة الفعلية قريباً',
     projects: [
+      ['Bonyan Materials', 'موقع شركة مواد بناء', 'موقع عربي حديث يعرض المنتجات والخدمات والمشروعات السابقة ويتيح للعملاء طلب عروض الأسعار.', ['HTML', 'CSS', 'JavaScript', 'Vite'], asset('bonyan.png'), 'https://mohamedgameel3201.github.io/bonyan-materials/'],
       ['Discover Academy', 'منصة تعليمية متكاملة', 'منصة تعليم إلكتروني تخدم الطلاب من مرحلة التأسيس حتى الثانوية، وتوفر حصصًا مباشرة واختبارات وواجبات ومتابعة للتقدم.', ['Laravel', 'PHP', 'MySQL', 'REST API'], asset('discover.png'), 'https://discoveracdemy.com/'],
       ['Vitamin Pharmacy', 'صيدلية ومتجر رعاية صحية', 'صيدلية إلكترونية لشراء الأدوية والفيتامينات والمكملات ومنتجات العناية الشخصية من خلال تجربة تسوق منظمة.', ['Laravel', 'Flutter', 'MySQL', 'REST API'], asset('vitamin.png'), 'https://vitamin-pharm.com/'],
       ['Madaarek Academy', 'منصة وتطبيق تعليمي', 'منصة تعليم مرنة تتيح تصفح الدورات والوصول إلى المحتوى التدريبي ومتابعة التقدم عبر الويب والموبايل.', ['Flutter', 'Laravel', 'MySQL', 'REST API'], asset('madaarek.png'), 'https://madaarekacademy.com/'],
       ['Prova Store', 'متجر أزياء وتطبيق موبايل', 'متجر إلكتروني للحقائب والملابس الأصلية يوفر تجربة شراء عصرية وطلبات سهلة ودفعًا إلكترونيًا آمنًا.', ['Flutter', 'Laravel', 'MySQL', 'Apple Pay'], asset('prova.jpg'), 'https://www.prova-store.com/'],
-      ['Tawselah Express', 'منصة شحن وخدمات لوجستية', 'منصة متكاملة لإصدار بوليصات الشحن وإدارة الشحنات وحساب التكلفة وتتبع عمليات التوصيل.', ['Laravel', 'PHP', 'MySQL', 'REST API'], asset('tawselah.png'), 'https://tawselah-express.com/'],
-      ['Bonyan Materials', 'موقع شركة مواد بناء', 'موقع عربي حديث يعرض المنتجات والخدمات والمشروعات السابقة ويتيح للعملاء طلب عروض الأسعار.', ['HTML', 'CSS', 'JavaScript', 'Vite'], asset('bonyan.png'), 'https://mohamedgameel3201.github.io/bonyan-materials/']
+      ['Tawselah Express', 'منصة شحن وخدمات لوجستية', 'منصة متكاملة لإصدار بوليصات الشحن وإدارة الشحنات وحساب التكلفة وتتبع عمليات التوصيل.', ['Laravel', 'PHP', 'MySQL', 'REST API'], asset('tawselah.png'), 'https://tawselah-express.com/']
     ],
     skillsTitle: 'المهارات والتقنيات', skillGroups: [['تطوير الموبايل', ['Flutter', 'Dart', 'Firebase', 'REST APIs']], ['تطوير الويب', ['Laravel', 'PHP', 'MySQL', 'Blade']], ['أدوات العمل', ['Git', 'GitHub', 'Figma', 'Postman']]],
     expTitle: 'الخبرة', exp: [['الآن', 'مؤسس ومطوّر', 'Codiryx', 'بناء منتجات ويب وموبايل هادفة للعملاء والشركات النامية.'], ['احترافية', 'مطوّر Flutter', 'تطبيقات الموبايل', 'إنشاء تطبيقات متعددة المنصات سريعة وسهلة الصيانة بتجربة استخدام مميزة.'], ['احترافية', 'مطوّر Laravel', 'منصات الويب', 'تطوير واجهات API آمنة ولوحات تحكم وأنظمة أعمال قابلة للتوسع.']],
